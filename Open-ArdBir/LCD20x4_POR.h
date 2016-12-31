@@ -1,6 +1,6 @@
-char *PIDName[]   ={"Uso", "Constante kP", "Constante kI", "Constante kD", "SampleTime  ", "Janela  ms  ", "PWM Ebu     ", "Calibragem  " , "Histerese   "};
-char *stageName[] ={"Mash In   ", "Fitase    ", "Glucanase ", "Protease  ", "bAmilase  ", "aAmilase  ", "aAmilase2 ", "Mash Out  ", "Ebulicao  ", "Cooling   ", "Whirlpool "};
-char *unitName[]  ={"Escala     ", "Sensor     ", "Ebulicao   ", "Ebulicao   ", "Ciclo Bomba", "Pausa Bomba", "Bmb PreMash",  "Bmb em Mash", "Bmb MashOut", "Bmb em Ebu ", "Bmb Parada ", "Bmb Parada ", "PID Pipe   " , "Pula Ad.Mlt   ", "Pula Remova", "Pula Iodo  ", "Tempo Iodo ", "Whirlpool "};
+char *PIDName[]   ={"Uso", "Constant kP", "Constant kI", "Constant kD", "SampleTime ", "Janela  ms  ", "PWM Fervura ", "Calibragem  " , "Histerese   "};
+char *stageName[] ={"Mash In   ", "Fitase    ", "Glucanase ", "Protease  ", "bAmilase  ", "aAmilase  ", "aAmilase2 ", "Mash Out  ", "Fervura  ", "Resfriar ", "Whirlpool "};
+char *unitName[]  ={"Escala     ", "Sensor     ", "Fervura     ", "Ciclo Bomba", "Pausa Bomba", "Bmb PreMash",  "Bmb Mash   ", "Bmb MashOut", "Bmb Fervura ", "Bmb Parada ",  "PID Pipe   " , "Pula Ad.Mlt ", "Pula Remova", "Pula Iodo  ", "Tempo Iodo ", "Whirlpool "};
 
 byte HeatONOFF[8]    = {B00000, B01110, B01010, B01010, B01100, B01010, B01010, B00000};  // [5] HEAT symbol
 byte RevHeatONOFF[8] = {B11111, B10001, B10101, B10101, B10011, B10101, B10101, B11111};  // [6] reverse HEAT symbol
@@ -176,7 +176,7 @@ void Temp_Wait(float Temp){
 void Boil(float Heat, float Temp, byte Tipo){
   if (Tipo==1){
     lcd.setCursor(0,0);
-    lcd.print(F(" AUTO -->   Ebulicao"));
+    lcd.print(F(" AUTO -->   Fervura"));
   }
   
   //lcd.setCursor(1,1);
@@ -409,7 +409,7 @@ void NumHops(byte SetNumHops){
 
 void Menu_3_3_9(){
   lcd.setCursor(1,2);
-  lcd.print(F("Ebulicao      "));
+  lcd.print(F("Fervura       "));
   LCD_QQxO();
 } 
 

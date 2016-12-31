@@ -20,7 +20,7 @@
 // 4 Portuguese
 // 5 Russian    (only 20 x 4)
 // 6 Norwegian  (only 20 x 4)
-#define LCDLanguage 2
+#define LCDLanguage 4
 
 // ==============================================
 // END OF SETTING SECTION
